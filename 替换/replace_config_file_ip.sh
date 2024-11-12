@@ -16,7 +16,7 @@ function SED_CONFIG() {
 		for f in $(grep -Rla "$DLD_IP" .);do
 		#\< 和 \> 是为了匹配完整的单词边界，即确保替换只发生在完全匹配的单词上，而不是单词的子串上
 		#\<：匹配单词的开始。\>：匹配单词的结束。
-			sed -i "s/\<$DLD_IP>/$NEW_IP/g" "$f" 
+			sed -i "s/\<$DLD_IP\>/$NEW_IP/g" "$f" 
 			
 		done
 	done
