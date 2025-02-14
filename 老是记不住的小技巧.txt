@@ -1,0 +1,29 @@
+补全k8s命令
+yum install bash-completion -y
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+source ~/.bashrc
+
+查看命名空间的标签
+kubectl get ns --show-lables
+
+给命令空间打标签
+kubectl label nodes node01 disktype=ssd
+
+centos6启动命令
+service php-fpm status
+/usr/local/python/bin/python /usr/local/python/bin/supervisord -c /etc/supervisord.conf
+/etc/init.d/zabbix_agentd start
+
+直接输出每个进程的完整命令
+ps axo command
+
+git新建上传流程
+下载git
+初始化 git init
+添加远程地址 git remote add origin https://github.com/zhengaofeng/ci-cd.git
+git add .
+git commit -m "frist commit"
+git branch -M main
+git push -u origin main
+输入账号，密码是GitHub Token（需要自行创建）
+缓存凭据 git config --global credential.helper store
